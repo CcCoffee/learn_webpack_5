@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webpack简介</title>
+    <!-- 问题 1 -->
+    <!-- 浏览器不能识别less文件，必须借助webpack编译成css才行 -->
+    <!-- <link rel="stylesheet" href="./index.less"> -->
+
+    <!-- 问题 2 -->
+    <!-- 并不能使用script文件，浏览器不能识别es6语法的import，
+        需要一个工具把浏览器不能识别的语法编译成浏览器能够识别的语法 -->
+    <!-- Uncaught SyntaxError: Cannot use import statement outside a module -->
+
+    <!-- 以上问题使得前端提出构建工具的概念，大工具把小工具的功能都包含进来，此时只要关心一个工具如何使用即可 -->
+
+    <!-- webpack是静态文件打包器 -->
+    <script src="./index.js"></script>
+</head>
+<body>
+    <h1 id="title">hello webpack 5</h1>
+</body>
+</html>
