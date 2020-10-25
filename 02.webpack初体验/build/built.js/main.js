@@ -7,7 +7,6 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/data.json":
@@ -20,7 +19,20 @@
 /*! runtime requirements: module */
 /***/ ((module) => {
 
+"use strict";
 eval("module.exports = {\"name\":\"Kevin\"};\n\n//# sourceURL=webpack://webpack_test/./src/data.json?");
+
+/***/ }),
+
+/***/ "./src/index.css":
+/*!***********************!*\
+  !*** ./src/index.css ***!
+  \***********************/
+/*! unknown exports (runtime-defined) */
+/*! runtime requirements:  */
+/***/ (() => {
+
+eval("throw new Error(\"Module parse failed: Unexpected token (1:5)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n> body {\\n|     background-color: red;\\n| }\");\n\n//# sourceURL=webpack://webpack_test/./src/index.css?");
 
 /***/ }),
 
@@ -30,10 +42,11 @@ eval("module.exports = {\"name\":\"Kevin\"};\n\n//# sourceURL=webpack://webpack_
   \**********************/
 /*! namespace exports */
 /*! exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _data_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data.json */ \"./src/data.json\");\n/**\n * webpack的入口文件\n * \n * 1. 运行指令：\n * 开发环境：webpack ./src/index.js -o ./build/built.js --mode=development\n * webpack会以 ./src/index.js 为入口文件开始打包，打包后输出到 ./build/built.js\n * 整体打包环境是开发环境\n * \n   % webpack ./src/index.js -o ./build/built.js --mode=development\n   [webpack-cli] Compilation finished\n   asset main.js 1.16 KiB [emitted] (name: main)\n   ./src/index.js 339 bytes [built] [code generated]\n   webpack 5.2.0 compiled successfully in 94 ms\n * \n * 生产环境：webpack ./src/index.js -o ./build/built.js --mode=production\n * webpack会以 ./src/index.js 为入口文件开始打包，打包后输出到 ./build/built.js\n * 整体打包环境是开发环境。\n * \n   % webpack ./src/index.js -o ./build/built.js --mode=production\n   [webpack-cli] Compilation finished\n   asset main.js 15 bytes [emitted] [minimized] (name: main) #压缩，输出文件体积非常小\n   ./src/index.js 339 bytes [built] [code generated]\n   webpack 5.2.0 compiled successfully in 201 ms\n * \n */\n\n\n\n function add(x,y){\n     return x+y;\n }\n\n console.log(add(1,2));\n\n console.log(_data_json__WEBPACK_IMPORTED_MODULE_0__);\n\n//# sourceURL=webpack://webpack_test/./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _data_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data.json */ \"./src/data.json\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_1__);\n/**\n * webpack的入口文件\n * \n * 1. 运行指令：\n * 开发环境：webpack ./src/index.js -o ./build/built.js --mode=development\n * webpack会以 ./src/index.js 为入口文件开始打包，打包后输出到 ./build/built.js\n * 整体打包环境是开发环境\n * \n   % webpack ./src/index.js -o ./build/built.js --mode=development\n   [webpack-cli] Compilation finished\n   asset main.js 1.16 KiB [emitted] (name: main)\n   ./src/index.js 339 bytes [built] [code generated]\n   webpack 5.2.0 compiled successfully in 94 ms\n * \n * 生产环境：webpack ./src/index.js -o ./build/built.js --mode=production\n * webpack会以 ./src/index.js 为入口文件开始打包，打包后输出到 ./build/built.js\n * 整体打包环境是开发环境。\n * \n   % webpack ./src/index.js -o ./build/built.js --mode=production\n   [webpack-cli] Compilation finished\n   asset main.js 15 bytes [emitted] [minimized] (name: main) #压缩，输出文件体积非常小\n   ./src/index.js 339 bytes [built] [code generated]\n   webpack 5.2.0 compiled successfully in 201 ms\n * \n */\n\n// webpack 能够处理json 文件\n\n /**\n    % webpack ./src/index.js -o ./build/built.js --mode=development\n    % node build/built.js/main.js \n    3\n    { name: 'Kevin' }\n  */\n console.log(_data_json__WEBPACK_IMPORTED_MODULE_0__);\n\n \n\n function add(x,y){\n     return x+y;\n }\n\n console.log(add(1,2));\n\n\n\n//# sourceURL=webpack://webpack_test/./src/index.js?");
 
 /***/ })
 
@@ -63,6 +76,35 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dat
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => module['default'] :
+/******/ 				() => module;
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
