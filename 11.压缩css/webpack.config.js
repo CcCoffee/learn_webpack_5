@@ -1,11 +1,11 @@
-const { resolve } = require("path");
-const htmlWebpackPlugin = require("html-webpack-plugin");
+const { resolve } = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 // 提取css文件，单独的css文件使用link标签引入，不会出现闪屏现象，style标签则会。js文件也会减小。
-//npm i mini-css-extract-plugin -D
-const miniCssExtractPlugin = require("mini-css-extract-plugin")
-const optimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
+// npm i mini-css-extract-plugin -D
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 
-//设置node环境变量，给postcss使用，否则postcss默认使用production配置
+// 设置node环境变量，给postcss使用，否则postcss默认使用production配置
 // process.env.NODE_ENV='development';
 
 module.exports = {
@@ -22,14 +22,14 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          miniCssExtractPlugin.loader,
-          "css-loader", // 将css整合到js文件中。
+          MiniCssExtractPlugin.loader,
+          'css-loader', // 将css整合到js文件中。
           {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
                 ident: 'postcss',
-                 plugins: [
+                plugins: [
                   [
                     'postcss-preset-env',
                     {
@@ -37,22 +37,22 @@ module.exports = {
                     },
                   ],
                 ],
-              }
-            }
-          }
-        ]
+              },
+            },
+          },
+        ],
       },
-    ]
+    ],
   },
   plugins: [
-    new htmlWebpackPlugin({
-      template: './src/index.html'
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
     }),
-    new miniCssExtractPlugin({
-      filename:'styles/built.css' // 确保目录结构一致
+    new MiniCssExtractPlugin({
+      filename: 'styles/built.css', // 确保目录结构一致
     }),
     // 压缩css，默认配置足够了，可以看到会被压缩成一行css
-    new optimizeCssAssetsWebpackPlugin()
+    new OptimizeCssAssetsWebpackPlugin(),
   ],
   mode: 'development',
   devServer: {
@@ -62,6 +62,6 @@ module.exports = {
     compress: true,
     open: true,
     // 自动打开默认浏览器
-    port: 3000
-  }
-}
+    port: 3000,
+  },
+};
