@@ -19,19 +19,27 @@
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      "ie>9"
     ],
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "ie>9"
     ]
   },
   "homepage": "https://github.com/CcCoffee/learn_webpack_5#readme",
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "@babel/polyfill": "^7.12.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "babel-preset-es2015": "^6.24.1",
+    "core-js": "^3.8.1",
     "css-loader": "^5.0.0",
     "eslint": "^7.15.0",
     "eslint-config-airbnb-base": "^14.2.1",
