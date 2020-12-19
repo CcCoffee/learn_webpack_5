@@ -13,7 +13,7 @@ module.exports = {
     // name：取文件名
     filename: 'js/[name].[contenthash:10].js',
     path: resolve(__dirname, 'build'),
-    publicPath: '/',
+    publicPath: './',
   },
   target: ['web', 'es5'], // 兼容IE必须加上 target
 
