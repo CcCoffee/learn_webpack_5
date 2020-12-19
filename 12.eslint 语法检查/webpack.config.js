@@ -13,9 +13,12 @@ module.exports = {
       // 只检查自己写的源代码，不检查第三方库
       // 设置检查规则：
       //   package.json中eslintConfig中设置
-      //     "eslintConfig": {
-      //        "extends": "airbnb-base"
-      //      }
+      // "eslintConfig": {
+      //   "extends": "airbnb-base",
+      //   "env": {
+      //     "browser": true //支持浏览器的全局变量，如window
+      //   }
+      // },
       // 著名的风格指南：airbnb
       //   airbnb --> npm i eslint-config-airbnb-base eslint-plugin-import eslint -D
       {
