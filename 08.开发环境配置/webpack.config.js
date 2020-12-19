@@ -1,21 +1,22 @@
 /**
  * 开发环境配置：能让代码运行即可
  */
-const {resolve} = require("path")
-const htmlWebpackPlugin = require('html-webpack-plugin')
+const { resolve } = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'js/built.js',
-    path: resolve(__dirname, "build"),
+    path: resolve(__dirname, 'build'),
     publicPath: './',
   },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'] // css最终并不会单独输出，而是打包到了js文件中
+        use: ['style-loader', 'css-loader'], // css最终并不会单独输出，而是打包到了js文件中
       },
       {
         test: /\.less$/,
@@ -24,7 +25,7 @@ module.exports = {
           'css-loader',
           // 需要安装 less-loader 和 less
           'less-loader',
-        ]
+        ],
       },
       {
         // 处理css中的url图片资源，但是处理不了html中的img图片
@@ -44,8 +45,8 @@ module.exports = {
           // [hash:10] 取图片的 hash 的前 10 位
           // [ext] 取文件的拓展名
           name: '[hash:10].[ext]',
-          outputPath: 'images'
-        }
+          outputPath: 'images',
+        },
       },
       {
         test: /\.html$/,
@@ -58,15 +59,16 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[hash:10].[ext]',
-          outputPath: 'media'
-        }
-      }
-    ]
+          outputPath: 'media',
+        },
+      },
+    ],
   },
   plugins: [
-    new htmlWebpackPlugin({
-      template: './src/index.html'
-    })
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+    new CleanWebpackPlugin(), // 每次build前删除build文件夹
   ],
   mode: 'development',
   // 开发服务器 devServer，用来自动编译，自动打开浏览器，自动刷新浏览器
@@ -81,6 +83,6 @@ module.exports = {
     compress: true,
     open: true,
     // 自动打开默认浏览器
-    port: 3000
-  }
-}
+    port: 3000,
+  },
+};
