@@ -32,8 +32,7 @@
   "homepage": "https://github.com/CcCoffee/learn_webpack_5#readme",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "jquery": "^3.5.1",
-    "thread-loader": "^3.0.1"
+    "jquery": "^3.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -64,7 +63,8 @@
     "webpack": "^5.2.0",
     "webpack-cli": "^4.1.0",
     "webpack-dev-server": "^3.11.0",
-    "workbox-webpack-plugin": "^6.0.2"
+    "workbox-webpack-plugin": "^6.0.2",
+    "thread-loader": "^3.0.1"
   },
   "eslintConfig": {
     "extends": "airbnb-base",
