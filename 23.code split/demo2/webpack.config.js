@@ -28,7 +28,8 @@ module.exports = {
     new CleanWebpackPlugin(), // 每次build前删除build文件夹
   ],
   /*
-    可以将node_modules中代码单独打包一个chunk最终输出
+    可以将node_modules中代码单独打包一个chunk最终输出。（还可以使用dll对第三方库再次进行单独的打包，能够进行细化）
+    这样输出至少有两个js文件，另一个是自己写的代码。
     自动分析多入口chunk中，有没有公共的文件（不能太小，几十KB）。如果有会打包成单独的一个chunk
   */
   optimization: {
