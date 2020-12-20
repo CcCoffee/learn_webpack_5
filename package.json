@@ -31,8 +31,9 @@
   },
   "homepage": "https://github.com/CcCoffee/learn_webpack_5#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "jquery": "^3.5.1",
-    "@babel/polyfill": "^7.12.1"
+    "thread-loader": "^3.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
